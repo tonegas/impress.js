@@ -502,15 +502,3 @@ hr {
 .slide-border .title h1 {
     font-size: 1.3em;
 }
-
-
-
-.substep-show-element{
-    opacity: 1;
-    transition: opacity 1s ease 0s;    
-}
-
-.substep-hide-element{
-    opacity: 0;
-    transition: opacity 1s ease 0s;    
-}

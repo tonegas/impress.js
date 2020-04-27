@@ -89,9 +89,7 @@
                 "." + subElem.getAttribute( "data-show-only" ) + "," +
                 "." + subElem.getAttribute( "data-show-from" )
             ).forEach( obj => {
-                // obj.style.opacity = 0;
-                obj.classList.remove("substep-show-element");
-                obj.classList.add("substep-show-element");
+                obj.style.opacity = 0;
             } );
             /* Show from the beginning all elements that are referred by "data-hide-only"
                 and "data-hide-from" */
@@ -99,9 +97,7 @@
                 "." + subElem.getAttribute( "data-hide-only" ) + "," +
                 "." + subElem.getAttribute( "data-hide-from" )
             ).forEach( obj => {
-                // obj.style.opacity = 1;
-                obj.classList.remove("substep-hide-element");
-                obj.classList.add("substep-show-element");
+                obj.style.opacity = 1;
             } );
             /* Set the base css attribute to the objects */
             resetCss( subElem );
@@ -117,9 +113,7 @@
                     "." + subElem.getAttribute( "data-show-from" ) + "," +
                     "." + subElem.getAttribute( "data-hide-from" )
                 ).forEach( obj => {
-                    // obj.style.opacity = "";
-                    obj.classList.remove("substep-show-element");
-                    obj.classList.remove("substep-hide-element");
+                    obj.style.opacity = "";
                 } );
                 /* Set the base css attribute to the objects */
                 resetCss( subElem );
@@ -136,10 +130,8 @@
                 "." + subElem.getAttribute( "data-show-only" ) + "," +
                 "." + subElem.getAttribute( "data-show-from" )
             ).forEach( obj => {
-                // obj.style.opacity = 0;
-                // obj.style.transition = "opacity 1s";
-                obj.classList.remove("substep-show-element");
-                obj.classList.add("substep-hide-element");
+                obj.style.opacity = 0;
+                obj.style.transition = "opacity 1s";
             } );
             /* Show all elements are referred by "data-hide-only" and "data-hide-from"
                 in all substeps */
@@ -147,10 +139,8 @@
                 "." + subElem.getAttribute( "data-hide-only" ) + "," +
                 "." + subElem.getAttribute( "data-hide-from" )
             ).forEach( obj => {
-                // obj.style.opacity = 1;
-                // obj.style.transition = "opacity 1s";
-                obj.classList.add("substep-show-element");
-                obj.classList.remove("substep-hide-element");
+                obj.style.opacity = 1;
+                obj.style.transition = "opacity 1s";
             } );
             /* Set the base css attribute to the objects */
             if ( event.type === "impress:substep:stepleaveaborted" ) {
@@ -167,10 +157,8 @@
                 "." + subElem.getAttribute( "data-show-from" ) + "," +
                 "." + subElem.getAttribute( "data-hide-to" )
             ).forEach( obj => {
-                obj.classList.add("substep-show-element");
-                obj.classList.remove("substep-hide-element");
-                // obj.style.opacity = 1;
-                // obj.style.transition = "opacity 1s";
+                obj.style.opacity = 1;
+                obj.style.transition = "opacity 1s";
             } );
             /* Hide all elements that are referred by "data-show-to" or "data-hide-from" in the
                 visible substeps */
@@ -178,10 +166,8 @@
                 "." + subElem.getAttribute( "data-show-to" ) + "," +
                 "." + subElem.getAttribute( "data-hide-from" )
             ).forEach( obj => {
-                obj.classList.remove("substep-show-element");
-                obj.classList.add("substep-hide-element");
-                // obj.style.opacity = 0;
-                // obj.style.transition = "opacity 1s";
+                obj.style.opacity = 0;
+                obj.style.transition = "opacity 1s";
             } );
             /* Apply the css attribute to the objects referred by "data-style-from" */
             for ( var i = 0, atts = subElem.attributes, n = atts.length; i < n; i++ )  {
@@ -219,10 +205,8 @@
                 "." + subElem.getAttribute( "data-show-from" ) + "," +
                 "." + subElem.getAttribute( "data-hide-to" )
             ).forEach( obj => {
-                obj.classList.add("substep-show-element");
-                obj.classList.remove("substep-hide-element");
-                // obj.style.opacity = 1;
-                // obj.style.transition = "opacity 1s";
+                obj.style.opacity = 1;
+                obj.style.transition = "opacity 1s";
             } );
             /* Hide all elements that are referred by "data-hide-only", "data-show-to" or
                 "data-hide-from" in the active substep */
@@ -231,10 +215,8 @@
                 "." + subElem.getAttribute( "data-show-to" ) + "," +
                 "." + subElem.getAttribute( "data-hide-from" )
             ).forEach( obj => {
-                obj.classList.add("substep-hide-element");
-                obj.classList.remove("substep-show-element");
-                // obj.style.opacity = 0;
-                // obj.style.transition = "opacity 1s";
+                obj.style.opacity = 0;
+                obj.style.transition = "opacity 1s";
             } );
 
             for ( var i = 0, atts = subElem.attributes, n = atts.length; i < n; i++ ) {
@@ -293,10 +275,8 @@
                 "." + subElem.getAttribute( "data-show-only" ) + "," +
                 "." + subElem.getAttribute( "data-show-from" )
             ).forEach( obj => {
-                obj.classList.add("substep-hide-element");
-                obj.classList.remove("substep-show-element");
-                // obj.style.opacity = 0;
-                // obj.style.transition = "";
+                obj.style.opacity = 0;
+                obj.style.transition = "";
             } );
 
             /* Show all elements are referred by "data-hide-only" or "data-hide-only"
@@ -305,10 +285,8 @@
                 "." + subElem.getAttribute( "data-hide-only" ) + "," +
                 "." + subElem.getAttribute( "data-hide-from" )
             ).forEach( obj => {
-                obj.classList.add("substep-show-element");
-                obj.classList.remove("substep-hide-element");
-                // obj.style.transition = "";
-                // obj.style.opacity = 1;
+                obj.style.transition = "";
+                obj.style.opacity = 1;
             } );
 
             // /* Set the base css attribute to the objects */
